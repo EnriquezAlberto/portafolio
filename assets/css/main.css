@@ -692,3 +692,12 @@ body {
   color: #042aff;
 font-size: 14.3px;
 }
+
+@media (max-width: 320px){
+
+  .footer__wrapper{
+ text-align: center;
+justify-content: center; 
+align-items: center;
+}
+}
