@@ -686,3 +686,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+.hover_footer:hover {
+  color: #042aff;
+font-size: 14.3px;
+}
