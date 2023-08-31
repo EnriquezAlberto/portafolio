@@ -509,6 +509,7 @@ body {
   border-top: 1px solid var(--color-border);
   padding-top: 3rem;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .contact__title {
@@ -530,6 +531,7 @@ body {
 .footer {
   background-color: var(--color-bg-footer);
   padding: 5rem 0;
+  margin-top: 30px;
 }
 
 .footer__wrapper {
@@ -702,4 +704,57 @@ font-size: 14.3px;
 justify-content: center; 
 align-items: center;
 }
+}
+
+  /* Estilos generales para el formulario */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: var(--fs-lg);
+}
+
+/* Estilos para los campos de entrada y textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    margin-top: 14px;
+    outline: none;
+}
+
+/* Estilos específicos para el textarea */
+textarea {
+    height: 150px; /* Altura ajustable */
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+/* Estilos para el botón de envío */
+button[type="submit"] {
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: var(--fw-semibold);
+    place-content: center;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.h2form {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: var(--fw-semibold);
 }
