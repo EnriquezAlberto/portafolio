@@ -12,7 +12,8 @@
 
   /* Font & Typography
   ___________________*/
-  --ff-body: "Space Grotesk", sans-serif;
+  font-family: ;
+  --ff-body: system-ui;
   /* font sizes */
   --fs-sm: 1.4rem;
   --fs-md: 1.6rem;
@@ -61,6 +62,7 @@ h4 {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  text-wrap: balance;
 }
 
 body,
@@ -293,7 +295,7 @@ body {
   position: absolute;
   content: "";
   background-color: var(--color-primary);
-  width: 10rem;
+  width: 13rem;
   height: 0.5rem;
   bottom: -2rem;
   left: 50%;
@@ -375,6 +377,8 @@ body {
 
 .skills__item {
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .skills__subtitle {
@@ -502,7 +506,6 @@ body {
   column-gap: 1rem;
 }
 
-
 /* Contact
 --------------------------------------------------------------*/
 .contact__wrapper {
@@ -622,9 +625,7 @@ body {
     justify-content: center;
   }
 
-background-str
-
-  .footer__wrapper {
+  background-str .footer__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -650,7 +651,13 @@ background-str
 
   .hero__img {
     justify-self: flex-end;
+   
   }
+  .hero__img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #5274ff;
+  }
+
 }
 
 /* Large devices */
@@ -691,70 +698,82 @@ background-str
   }
 }
 
-
 .hover_footer:hover {
   color: #042aff;
-font-size: 14.3px;
+  font-size: 14.3px;
 }
 
-@media (max-width: 320px){
-
-  .footer__wrapper{
- text-align: center;
-justify-content: center; 
-align-items: center;
+@media (max-width: 320px) {
+  .footer__wrapper {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
-}
 
-  /* Estilos generales para el formulario */
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-family: var(--fs-lg);
+/* Estilos generales para el formulario */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: var(--fs-lg);
 }
 
 /* Estilos para los campos de entrada y textarea */
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ffffff;
-    border-radius: 3px;
-    margin-top: 14px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  margin-top: 14px;
+  outline: none;
 }
 
 /* Estilos específicos para el textarea */
 textarea {
-    height: 150px; /* Altura ajustable */
-    resize: vertical; /* Permite redimensionar verticalmente */
+  height: 150px; /* Altura ajustable */
+  resize: vertical; /* Permite redimensionar verticalmente */
 }
 
 /* Estilos para el botón de envío */
 button[type="submit"] {
-    background-color: var(--color-white);
-    color: var(--color-primary-dark);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: var(--fw-semibold);
-    place-content: center;
+  background-color: var(--color-white);
+  color: var(--color-primary-dark);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: var(--fw-semibold);
+  place-content: center;
 }
 
 button[type="submit"]:hover {
-    background-color: var(--color-primary);
-    color: var(--color-text);
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .h2form {
   text-align: center;
   margin-bottom: 30px;
   font-weight: var(--fw-semibold);
+}
+
+.t {
+  background: linear-gradient(to right, #95b4b4 0%, #1216fc 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.larg {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
