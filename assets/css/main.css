@@ -651,15 +651,26 @@ body {
 
   .hero__img {
     justify-self: flex-end;
-   
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+      background-color 0.3s ease;
+    /* Agregamos transiciones para la sombra, opacidad y color de fondo */
+    border-radius: 8px;
   }
+
   .hero__img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #5274ff;
+    box-shadow: 0 0 20px rgba(82, 116, 255, 0.5);
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
+  img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(82, 116, 255, 0.5);
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
-
 /* Large devices */
 
 @media screen and (min-width: 968px) {
@@ -737,8 +748,10 @@ textarea {
 
 /* Estilos específicos para el textarea */
 textarea {
-  height: 150px; /* Altura ajustable */
-  resize: vertical; /* Permite redimensionar verticalmente */
+  height: 150px;
+  /* Altura ajustable */
+  resize: vertical;
+  /* Permite redimensionar verticalmente */
 }
 
 /* Estilos para el botón de envío */
@@ -766,8 +779,8 @@ button[type="submit"]:hover {
 
 .t {
   background: linear-gradient(to right, #95b4b4 0%, #1216fc 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .larg {
